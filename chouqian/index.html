@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求神问卜</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta content=”telephone=no” name=”format-detection” />
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<script src="js/jquery-3.1.1.min.js"></script>-->
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <style>
+        /*通用样式*/
+        *{
+            box-sizing: border-box;
+            background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -webkit-background-size: cover;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        /*局部样式*/
+        .cont{
+            width: 100%;
+            height: 100%;
+        }
+        .img_index{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        @media screen and (min-width: 800px){
+            .cont{
+                width: 600px;
+                margin: auto;
+            }
+            body{
+                background:url("img/bluebg.jpg") no-repeat;
+                background-size: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="cont">
+    <img src="img/xhs4.png" alt="" class="img_index">
+</div>
+<script>
+    var oImg = document.getElementsByClassName("img_index");
+    oImg[0].onclick = function(){
+        location.href = "./html/qiuqian.html"
+    };
+</script>
+</body>
+</html>

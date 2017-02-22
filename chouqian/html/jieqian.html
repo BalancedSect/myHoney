@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求神问卜</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta content=”telephone=no” name=”format-detection” />
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .cont{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 20px;
+            border: 3px solid red;
+            background-color: rgb(255,202,15);
+            color: green;
+        }
+        @media screen and  (min-width: 480px){
+            .cont{
+                position: relative;
+                width: 600px;
+                height: 100%;
+                margin: auto;
+                padding: 20px;
+                border: 3px solid red;
+                background-color: rgb(255,202,15);
+                color: green;
+            }
+            body{
+                background:url("../img/bluebg.jpg") no-repeat;
+                background-size: 100%;
+            }
+        }
+        .qianshu,.qianlei,.shiyue1,.shiyue2{
+            text-align: center;
+        }
+        .shiyi,.qianlei{
+            color: red;
+        }
+        .story{
+            text-indent: 2rem;
+            line-height: 30px;
+        }
+        .btn{
+            position: fixed;
+            left: 5%;
+            bottom: 1rem;
+            border-radius: 7px;
+            width: 90%;
+            color: green;
+            background-color: rgb(205,152,86);
+        }
+        @media screen and (min-width: 480px){
+            .btn{
+                position: fixed;
+                left: 50%;
+                transform: translate(-50%,0);
+                -moz-transform: translate(-50%,0);
+                -o-transform: translate(-50%,0);
+                -ms-transform: translate(-50%,0);
+                -webkit-transform: translate(-50%,0);
+                bottom: 1rem;
+                border-radius: 7px;
+                width: 540px;
+                color: green;
+                background-color: rgb(205,152,86);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="cont">
+    <h2 class="qianshu">第一签</h2>
+    <p class="qianlei">上签</p>
+    <h4 class="diangu">《典故:锺离成道》</h4>
+    <p class="gongwei">宫位:子宫</p>
+    <p class="shiyue1">开天辟地作良缘,吉日良时万物全,</p>
+    <p class="shiyue2">若得此签非小可,人行忠正帝王宣</p>
+    <p class="shiyi">诗意：此卦盘古初开天地之象,诸事皆吉也</p>
+    <p class="jieyue">解曰：</p>
+    <p class="story">锺离成道:东汉时人,姓锺离,名权字云房,号正阳.陕西西安咸阳县,仕汉将军,每出兵俱为先锋好杀人,至五十岁计杀人三十余万,北征吐番,发兵二万,均嬴弱士卒,失利尽散,独骑逃至山谷,遇胡僧引入山洞(终南山凝阳洞),悟人生荣辱得失,後辞官修道,得东华帝君授仙法,遂隐晋州羊角山,汉武帝时,多次礼聘不出,朝廷每有大事,常往咨询,时称山中宰相,吕洞宾之师,八仙之首,正阳派之开山祖师,称为正阳帝君.</p>
+    <button class="btn">返回首页</button>
+</div>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../json/qian.js"></script>
+<script>
+    var n = getCookie("sessionNum");
+    console.log(n);
+
+    $(".qianshu").text("观音灵签:"+myArr[n].观音灵签);
+    $(".qianlei").text("吉凶:"+myArr[n].吉凶);
+    $(".diangu").text("典故:《"+myArr[n].典故+"》");
+    $(".gongwei").text("宫位:"+myArr[n].宫位);
+    $(".shiyue1").text(myArr[n].诗曰[0]);
+    $(".shiyue2").text(myArr[n].诗曰[1]);
+    $(".shiyi").text("诗意:"+myArr[n].诗意);
+    $(".jieyue").text("解曰:"+myArr[n].解曰);
+    $(".story").text("典故:"+myArr[n].故事);
+
+    $(".btn").on("click",function(){
+        location.href = "../index.html"
+    })
+</script>
+</body>
+</html>
